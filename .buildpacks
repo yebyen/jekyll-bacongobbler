@@ -1,2 +1,3 @@
 git://github.com/bacongobbler/heroku-buildpack-jekyll.git
 git://github.com/heroku/heroku-buildpack-nodejs.git
+git://github.com/heroku/heroku-buildpack-ruby.git
