@@ -1,0 +1,5 @@
+ruby '2.2.2'
+source 'https://rubygems.org'
+gem 'jekyll'
+gem 'pygments.rb'
+gem 'kramdown'
