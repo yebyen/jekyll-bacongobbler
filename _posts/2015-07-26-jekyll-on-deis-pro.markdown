@@ -81,7 +81,18 @@ Be logged in as a user on your Deis cluster, and push your `blogosite` up to the
 
 Now you wait, and after a brief moment (unless fate smiles, and this article is older than the buildpack) you find that the push has resulted in a state of failure.  See something like this:
 
-    bad news from git push deis master
+    $ git push deis master
+    Warning: Permanently added the ECDSA host key for IP address '[45.55.208.23]:2222' to the list of known hosts.
+    Counting objects: 24, done.
+    Delta compression using up to 2 threads.
+    Compressing objects: 100% (22/22), done.
+    Writing objects: 100% (24/24), 8.64 KiB | 0 bytes/s, done.
+    Total 24 (delta 1), reused 0 (delta 0)
+    -----> Multipack app detected
+           =====> Downloading Buildpack: git://github.com/heroku/heroku-buildpack-nodejs.git
+    To ssh://git@deis.deis.moomboo.space:2222/yeoman-odometer.git
+     ! [remote rejected] master -> master (pre-receive hook declined)
+    error: failed to push some refs to 'ssh://git@deis.deis.moomboo.space:2222/yeoman-odometer.git'
 
 There are some [necessary adjustments](https://github.com/yebyen/jekyll-bacongobbler/commit/a97a48774627cbf8c06c38bc527445aeec184a15) that you must make to your `blogosite` for the new buildpack in order to make it deployable.  It needs:
 
@@ -109,7 +120,11 @@ Add a domain name to your new app with the deis cli, point the DNS at your load 
 
     deis domains:add blogosite.io
 
-The author of this tutorial notes as an aside that, if it was not made perfectly clear at the outset already, a Blog-only Deis cluster deployment is almost definitely a tremendous waste of resources.  Sure, your blog will probably never go down, but if you want to do it cheaper, there is almost surely a less expensive way, and if you followed this guide from start to finish, you may have just started the clock ticking on a new recurring expense.  I hope you need more from Deis than a blog, but even if that is all you need, rest assured that the EngineYard and Deis team will be there to support you with Deis PRO.
+The author of this tutorial notes as an aside that, ...
+
+If it was not made perfectly clear at the outset already, a Blog-only Deis cluster deployment is almost definitely a tremendous waste of resources
+
+Sure, your blog will probably never go down, but if you want to do it cheaper, there is almost surely a less expensive way, and if you followed this guide from start to finish, you may have just started the clock ticking on a new recurring expense.  I hope you need more from Deis than a blog, but even if that is all you need, rest assured that the EngineYard and Deis team will be there to support you with Deis PRO.
 
 If you read this far and you are not sure why you need Deis, there is a cheaper way to host your blog.  In fact, there is a cheaper way I know, and will share, but it involves doing un-supported things.  A Deis cluster, like almost any after-market consumable product, has [the recommended system requirements](http://docs.deis.io/en/latest/installing_deis/system-requirements/), and then there are [the requirements](/cheapest-fault-tolerant-deis-cluster).  So long for now!
 
