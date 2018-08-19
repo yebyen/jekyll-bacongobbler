@@ -11,4 +11,4 @@ github_username:  yebyen
 
 # Build settings
 markdown: kramdown
-exclude: [vendor]
+# exclude: [vendor]
