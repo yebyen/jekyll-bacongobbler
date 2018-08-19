@@ -71,5 +71,8 @@ DEPENDENCIES
   kramdown
   pygments.rb
 
+RUBY VERSION
+   ruby 2.3.7p456
+
 BUNDLED WITH
-   1.10.5
+   1.16.2
