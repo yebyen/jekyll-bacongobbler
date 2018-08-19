@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   This is a blog with a very well-thought-out description.  It is long
   enough to span more than one 80-character line.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jekyll.teamhephy.info" # the base hostname & protocol for your site
+url: "https://jekyll.teamhephy.info" # the base hostname & protocol for your site
 twitter_username: hess_sign
 github_username:  yebyen
 
